@@ -58,7 +58,7 @@ STATIC_ASSERT(sizeof(b32) == 4, "Expected b32 to be 4 byte");
 #endif
 #elif defined(__linux__) || defined(__gnu_linux__)
 //Linux OS
-define ZPLATFORM_LINUX 1
+#define ZPLATFORM_LINUX 1
 #if defined(__ANDROID__)
 #define ZPLATFORM_ANDROID 1
 #endif
