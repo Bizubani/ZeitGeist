@@ -87,3 +87,20 @@ STATIC_ASSERT(sizeof(b32) == 4, "Expected b32 to be 4 byte");
 #else
 #error "Unknown OS" 
 #endif
+
+//If we're on a windows machine, handle exporting and importing shared libraries
+#ifdef ZEXPORT
+//Exports 
+#ifdef _MSC_VER
+#define ZAPI __declspec(dllexport)
+#else
+#define ZAPI __attribute__((visibility("default")))
+#endif
+#else
+//Imports
+#ifdef _MSC_VER
+#define ZAPI __declspec(dllimport)
+#else
+#define ZAPI
+#endif
+#endif
