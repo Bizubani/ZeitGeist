@@ -1,4 +1,4 @@
-REM Build script for the engine. Will be replaced with cmake in the future
+REM Build script for the Zeit Geist engine. Will be replaced with cmake in the future
 @ECHO OFF   
 REM Force variables to wait till execution time to give their values
 SetLocal EnableDelayedExpansion
@@ -16,7 +16,7 @@ SET compilerFlags=-g -shared -Wvarargs -Wall -Werror
 REM -Wall -Werror
 SET includeFlags=-Isrc -I%VULKAN_SDK%/Include
 SET linkerFlags=-luser32 -lvulkan-1 -L%VULKAN_SDK%/Lib
-SET defines=-D_DEBUG -DKEXPORT -D_CRT_SECURE_NO_WARNINGS
+SET defines=-D_DEBUG -DZEXPORT -D_CRT_SECURE_NO_WARNINGS
 
 ECHO "Building %assembly%%.."
 clang %cFilenames% %compilerFlags% -o ../bin/%assembly%.dll %defines% %includeFlags% %linkerFlags%
