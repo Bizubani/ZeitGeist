@@ -3,10 +3,10 @@
         {
             "type": "shell",
             "label": "Build ZeitGeist Engine",
-            "windows":{
+            "windows": {
                 "command": "${workspaceFolder}/engine/build.bat"
             },
-            "linux":{
+            "linux": {
                 "command": "${workspaceFolder}/engine/build.sh"
             },
             "options": {
@@ -21,7 +21,7 @@
         {
             "type": "shell",
             "label": "Build ZeitGeist Testbed",
-            "windows":{
+            "windows": {
                 "command": "${workspaceFolder}/testbed/build.bat"
             },
             "linux": {
@@ -38,23 +38,22 @@
         {
             "type": "shell",
             "label": "Build Everything",
-            "windows":{
+            "windows": {
                 "command": "${workspaceFolder}/build-all.bat"
             },
-            "linux":{
+            "linux": {
                 "command": "${workspaceFolder}/build-all.sh"
             },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher":[
+            "problemMatcher": [
                 "$gcc"
             ],
             "group": {
                 "kind": "build",
-                 "isDefault": true
-                }
-
+                "isDefault": true
+            }
         }
     ],
     "version": "2.0.0"
