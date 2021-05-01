@@ -1,4 +1,5 @@
-#include "src\defines.h"
+#include "test.h"
+#include <stdio.h>
 
 void print_int (i32 test)
 {
